@@ -6,8 +6,10 @@ public class AdvMath {
     public static void main(String[] args) {
         System.out.println(root(70, 145));
     }
-    public static double pow(double num, int power)
+    public static double pow(double num, int power) throws IllegalArgumentException
     {
+        if (power<0)
+            throw new IllegalArgumentException("Power cannot be less than zero!");
         double res=1;
         for(int i=0; i<power; i++)
             res*=num;
