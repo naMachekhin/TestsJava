@@ -8,6 +8,12 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+
+import static org.assertj.core.api.Assertions.*;
+import static org.assertj.core.api.Assumptions.*;
+
 
 
 public class SeleniumTests {
@@ -70,5 +76,23 @@ public class SeleniumTests {
         Assertions.assertTrue(find_alert);
         System.out.println("    Alert for incorrect login found");
         driver.quit();
+    }
+
+    @Test
+    public void checkSupportURL()
+    {
+        System.out.println("    Testing support url:");
+        System.setProperty("webdriver.chrome.driver", "C:\\chromedriver.exe");
+        driver = new ChromeDriver();
+        driver.get("https://distedu.ukma.edu.ua/login/index.php");
+        assumeThatCode(()->driver.findElement(By.linkText("Служба підтримки"))).doesNotThrowAnyException();
+        System.out.println("    Support url found");
+        driver.findElement(By.linkText("Служба підтримки")).click();
+        ArrayList<String> tabs = new ArrayList<>(driver.getWindowHandles());
+        assumeThat(tabs.size()).isEqualTo(2);
+        driver.switchTo().window(tabs.get(1));
+        assertThat(driver.getCurrentUrl()).startsWith("https://").contains("support").contains("ukma.edu.ua");
+        driver.quit();
+
     }
 }
