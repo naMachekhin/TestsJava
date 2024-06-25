@@ -4,7 +4,7 @@ public class AdvMath {
     public static double eps=0.00001;
 
     public static void main(String[] args) {
-        System.out.println(root(70, 145));
+        System.out.println(findPrimeAfter(43));
     }
     public static double pow(double num, int power) throws IllegalArgumentException
     {
@@ -35,4 +35,24 @@ public class AdvMath {
         }
         return avg;
     }
+
+
+    public static int findPrimeAfter(int n)
+    {
+        if (n<2) return 2;
+        boolean prime=false;
+        while(!prime)
+        {
+            prime=true;
+            n++;
+            for(int i=2; i<=root(n, 2) && prime; i++)
+            {
+                if(n%i==0)
+                    prime=false;
+            }
+        }
+        return n;
+    }
+
+
 }

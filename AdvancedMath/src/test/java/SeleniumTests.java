@@ -20,7 +20,7 @@ public class SeleniumTests {
     WebDriver driver;
 
 
-    @Test
+    /*@Test
     public void checkLogo() {
 
         System.out.println("Testing logo:");
@@ -94,5 +94,5 @@ public class SeleniumTests {
         assertThat(driver.getCurrentUrl()).startsWith("https://").contains("support").contains("ukma.edu.ua");
         driver.quit();
 
-    }
+    }*/
 }

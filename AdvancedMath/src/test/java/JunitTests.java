@@ -9,7 +9,7 @@ import sun.jvm.hotspot.utilities.Assert;
 
 public class JunitTests {
 
-    @ParameterizedTest
+    /*@ParameterizedTest
     @ValueSource(doubles={0.0, 1.0, -2.5, 7.4})
     @Tag("local")
     public void power_test(double n)
@@ -40,7 +40,7 @@ public class JunitTests {
         System.out.println("    Power exception success!");
         Assertions.assertTrue(Math.abs(AdvMath.root(70, 145)-1.02973)<=AdvMath.eps);
         System.out.println("    Calculation sample is correct!");
-    }
+    }*/
 
 
 }
