@@ -1,14 +1,12 @@
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Assumptions;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 import static org.assertj.core.api.Assertions.*;
@@ -16,11 +14,11 @@ import static org.assertj.core.api.Assumptions.*;
 
 
 
-public class SeleniumTests {
+public class SeleniumTest {
     WebDriver driver;
 
 
-    /*@Test
+    @Test
     public void checkLogo() {
 
         System.out.println("Testing logo:");
@@ -94,5 +92,5 @@ public class SeleniumTests {
         assertThat(driver.getCurrentUrl()).startsWith("https://").contains("support").contains("ukma.edu.ua");
         driver.quit();
 
-    }*/
+    }
 }

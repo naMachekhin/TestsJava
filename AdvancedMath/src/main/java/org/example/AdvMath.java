@@ -1,10 +1,15 @@
 package org.example;
 
+import java.util.Scanner;
+
 public class AdvMath {
     public static double eps=0.00001;
 
     public static void main(String[] args) {
-        System.out.println(findPrimeAfter(43));
+        Scanner scnr=new Scanner(System.in);
+        System.out.print("Enter int: ");
+        int n = scnr.nextInt();
+        System.out.println(findPrimeAfter(n));
     }
     public static double pow(double num, int power) throws IllegalArgumentException
     {
