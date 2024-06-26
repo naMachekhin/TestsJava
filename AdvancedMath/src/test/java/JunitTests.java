@@ -5,8 +5,9 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.provider.ValueSource;
+import sun.jvm.hotspot.utilities.Assert;
 
-public class JunitTest {
+public class JunitTests {
 
     @ParameterizedTest
     @ValueSource(doubles={0.0, 1.0, -2.5, 7.4})

@@ -1,12 +1,14 @@
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Assumptions;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 import static org.assertj.core.api.Assertions.*;
@@ -14,7 +16,7 @@ import static org.assertj.core.api.Assumptions.*;
 
 
 
-public class SeleniumTest {
+public class SeleniumTests {
     WebDriver driver;
 
 
